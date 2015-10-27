@@ -15,6 +15,7 @@
 </head>
 <body>
 	<div class="swiper-container">
+	  <div class="arrow"></div>
 	  <div class="swiper-wrapper">
 	    <div class="swiper-slide s1">
 		    <div class="ani a1" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"></div>
@@ -77,7 +78,15 @@
 		}, 
 		onSlideChangeEnd: function(swiper){ 
 		  swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-		} 
+		  if(mySwiper.isEnd){
+				$('.arrow').hide();
+			}else{
+				$('.arrow').show();
+			}
+		},
+		// onSlideChangeEnd: function(swiper){
+	 //      alert('事件触发了;');
+	 //    }
 	  })        
 	</script>
 </body>
