@@ -396,3 +396,53 @@
 	50% { -webkit-transform: translateY(0%); transform: translateY(0%); opacity:1;}
 	100% { -webkit-transform: translateY(-100%); transform: translateY(-100%); opacity:0;}
 }
+
+/* music */
+.off{
+	background:none !important
+}
+.off .yinyue{
+	-webkit-animation:none;
+	animation:none;
+}
+.off .sc-yinyue{
+	display:none;
+}
+
+.sc-yinyue{
+	background:url(../images/music.gif);
+	background-size:cover;
+	height:60px;
+	width:60px;
+	position:absolute;
+	right:10px;
+	top:10px;
+	z-index:9999;
+}
+
+.yinyue{
+	background:url(../images/music_off.png);
+	background-size:cover;
+	height:33px;
+	width:33px;
+	position:absolute;
+	right:20px;
+	top:20px;
+	-webkit-animation: rotating 1.2s linear infinite;
+		-moz-animation: rotating 1.2s linear infinite;
+		  -o-animation: rotating 1.2s linear infinite;
+			 animation: rotating 1.2s linear infinite;}
+
+@-webkit-keyframes rotating{
+	from{-webkit-transform:rotate(0deg)}
+	to{-webkit-transform:rotate(360deg)}
+}
+@keyframes rotating{
+	from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}
+}
+@-moz-keyframes rotating
+{
+	from{-moz-transform:rotate(0deg)}
+	to{-moz-transform:rotate(360deg)}
+}
